@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../modalConfig.service';
 
 @Component({
   selector: 'app-player',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player.component.css']
 })
 export class PlayerComponent implements OnInit {
-
-  constructor() { }
+  constructor(private config : ConfigService) { }
 
   ngOnInit(): void {
   }
+  
+  getShow() {
+    return this.config.getModalStatus();
+  }
+
+  cancel() {
+    this.config.cancel();
+  }
+
+
 
 }

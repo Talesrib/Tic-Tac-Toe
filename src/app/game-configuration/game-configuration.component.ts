@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../modalConfig.service';
 
 @Component({
   selector: 'app-game-configuration',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameConfigurationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private config : ConfigService) { }
 
   ngOnInit(): void {
+  }
+
+  show(){
+    this.config.show();
   }
 
 }
