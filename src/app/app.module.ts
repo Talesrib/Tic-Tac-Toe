@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { GameConfigurationComponent } from './game-configuration/game-configuration.component';
 import { PlayerComponent } from './player/player.component';
 import { ActiveGameComponent } from './active-game/active-game.component';
+import { ConfigService } from './modalConfig.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { ActiveGameComponent } from './active-game/active-game.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ConfigService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

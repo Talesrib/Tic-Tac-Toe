@@ -1,5 +1,5 @@
-<div id="backdrop"></div>
-<div class="modal">
+<div id="backdrop" *ngIf="getShow()"></div>
+<div class="modal" *ngIf="getShow()">
     <h2>Choose your name</h2>
     <form action="">
         <div>
@@ -7,7 +7,7 @@
             <input type="text" name="playername" id="playername">
         </div>
         <div>
-            <button type="submit" class="btn btn-alt">Cancel</button>
+            <button class="btn btn-alt" (click)="cancel()">Cancel</button>
             <button type="submit" class="btn">Confirm</button>
         </div>
     </form>
