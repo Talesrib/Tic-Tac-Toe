@@ -1,14 +1,29 @@
 <div id="backdrop" *ngIf="getShow()"></div>
-<div class="modal" *ngIf="getShow()">
+<div class="modal" *ngIf="getShow() === 1">
     <h2>Choose your name</h2>
     <form action="">
         <div>
-            <label for="playername">Player Name</label>
-            <input type="text" name="playername" id="playername">
+            <label for="playername">Player One Name</label>
+            <input type="text" name="playerone" id="playerone" [formControl]="nameplayerone" required>
         </div>
+        <p class="error">{{error}}</p>
         <div>
             <button class="btn btn-alt" (click)="cancel()">Cancel</button>
-            <button type="submit" class="btn">Confirm</button>
+            <button type="button" class="btn" (click)="savePlayer(1, nameplayerone)">Confirm</button>
+        </div>
+    </form>
+</div>
+<div class="modal" *ngIf="getShow() === 2">
+    <h2>Choose your name</h2>
+    <form action="">
+        <div>
+            <label for="playername">Player Two Name</label>
+            <input type="text" name="playertwo" id="playertwo" [formControl]="nameplayertwo" required>
+        </div>
+        <p class="error">{{error}}</p>
+        <div>
+            <button class="btn btn-alt" (click)="cancel()">Cancel</button>
+            <button type="button" class="btn" (click)="savePlayer(2, nameplayertwo)">Confirm</button>
         </div>
     </form>
 </div>

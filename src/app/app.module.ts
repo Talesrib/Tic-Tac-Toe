@@ -8,6 +8,7 @@ import { GameConfigurationComponent } from './game-configuration/game-configurat
 import { PlayerComponent } from './player/player.component';
 import { ActiveGameComponent } from './active-game/active-game.component';
 import { ConfigService } from './modalConfig.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ConfigService } from './modalConfig.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [ConfigService],
   bootstrap: [AppComponent]

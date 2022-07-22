@@ -4,17 +4,17 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ConfigService {
-  showModal : boolean
+  showModal : number
   constructor() {
-    this.showModal = false;
+    this.showModal = 0;
    }
 
-   show() {
-    this.showModal = true;
+   show(num : number) {
+    this.showModal = num;
    }
 
    cancel() {
-    this.showModal = false;
+    this.showModal = 0;
    }
 
    getModalStatus() {

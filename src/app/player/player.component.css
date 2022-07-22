@@ -43,3 +43,9 @@ form input {
         width: 40rem;
     }
 }
+
+input.ng-invalid.ng-touched {
+    border-color:rgb(136, 2, 2);
+    color: rgb(136, 2, 2);
+    background-color: rgb(253, 219, 219);
+}

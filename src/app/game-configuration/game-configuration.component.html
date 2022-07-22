@@ -3,17 +3,17 @@
         <li>
             <article>
                 <h2>Player 1</h2>
-                <h3>Player Name</h3>
+                <h3>{{getPlayer(1)}}</h3>
                 <p>X</p>
-                <button class="btn btn-alt" (click)="show()">Edit</button>
+                <button class="btn btn-alt" (click)="show(1)">Edit</button>
             </article>
         </li>
         <li>
             <article>
                 <h2>Player 2</h2>
-                <h3>Player Name</h3>
+                <h3>{{getPlayer(2)}}</h3>
                 <p>O</p>
-                <button class="btn btn-alt" (click)="show()">Edit</button>
+                <button class="btn btn-alt" (click)="show(2)">Edit</button>
             </article>
         </li>
     </ol>
