@@ -9,6 +9,8 @@ import { PlayerComponent } from './player/player.component';
 import { ActiveGameComponent } from './active-game/active-game.component';
 import { ConfigService } from './modalConfig.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ListComponent } from './list/list.component';
+import { GameService } from './game.service';
 
 @NgModule({
   declarations: [
@@ -16,14 +18,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     GameConfigurationComponent,
     PlayerComponent,
-    ActiveGameComponent
+    ActiveGameComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [ConfigService],
+  providers: [ConfigService , GameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
